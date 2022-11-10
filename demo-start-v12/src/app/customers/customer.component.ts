@@ -65,12 +65,14 @@ export class CustomerComponent implements OnInit {
       sendCatalog: true,
       phone: [''],
       notification: ['email'],
-      addressType: ['home'],
-      street1: [''],
-      street2: [''],
-      city: [''],
-      state: [''],
-      zip: ['']
+      addresses: this.fb.group({
+        addressType: ['home'],
+        street1: [''],
+        street2: [''],
+        city: [''],
+        state: [''],
+        zip: ['']
+      })
     });
 
     // watch for changes to the notification radio buttons
